@@ -153,6 +153,89 @@ body {
   color: white; /* deixa o texto branco para aparecer */
 }
 </style>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu Configurações</title>
+
+<style>
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.config {
+  background-color: #2196F3;
+  color: white;
+}
+
+.voltar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sair {
+  background-color: #f44336;
+  color: white;
+}
+.painel {
+  display: none;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button class="config" onclick="abrirMenu()">⚙️ Configurações</button>
+</header>
+
+<h1>Página Principal</h1>
+
+<div class="painel" id="menuConfig">
+  <h2>Menu de Configurações</h2>
+  
+  <button class="voltar" onclick="voltar()">🔙 Voltar</button>
+  <button class="sair" onclick="sair()">🚪 Sair</button>
+</div>
+
+<script>
+function abrirMenu() {
+  document.getElementById("menuConfig").style.display = "block";
+}
+
+function voltar() {
+  document.getElementById("menuConfig").style.display = "none";
+}
+
+function sair() {
+  window.location.href = "https://www.google.com"; 
+  // pode mudar para outra página do seu site
+}
+</script>
+
+</body>
+</html>
+
 
 
 
