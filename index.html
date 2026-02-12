@@ -65,6 +65,89 @@ function respostaNao() {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Questionário Sim ou Não</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #f2f2f2;
+}
+
+.caixa {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sim {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nao {
+  background-color: #f44336;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="caixa">
+  <h2 id="pergunta">Carregando pergunta...</h2>
+  <button class="sim" onclick="responder()">Sim</button>
+  <button class="nao" onclick="responder()">Não</button>
+</div>
+
+<script>
+let perguntas = [
+  "Você gosta de pizza?",
+  "Você gosta de programar?",
+  "Você já viajou para outro país?",
+  "Você prefere dia ao invés de noite?",
+  "Você gosta de jogos?",
+  "Você acorda cedo?",
+  "Você gosta de chocolate?",
+  "Você é uma pessoa feliz hoje?"
+];
+
+function novaPergunta() {
+  let aleatorio = Math.floor(Math.random() * perguntas.length);
+  document.getElementById("pergunta").innerText = perguntas[aleatorio];
+}
+
+function responder() {
+  alert("Resposta registrada! 😄");
+  novaPergunta();
+}
+
+novaPergunta();
+</script>
+
+</body>
+</html>
+
 
 
 
