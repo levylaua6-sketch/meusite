@@ -31,27 +31,20 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.bemvindo {
-  text-align: center;
-  font-size: 40px;
-  color: white;
-  background: linear-gradient(45deg, #4CAF50, #2196F3);
-  padding: 20px;
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
-}
-</style>
-</head>
 <body>
 
-<div class="bemvindo">
-  Bem-vindo ao meu site!
-</div>
+<h2 id="mensagem"></h2>
+
+<script>
+let nome = prompt("Qual é o seu nome?");
+document.getElementById("mensagem").innerHTML =
+  "Bem-vindo ao meu site, " + nome + "!";
+</script>
 
 </body>
 </html>
+
+
 
 
 
